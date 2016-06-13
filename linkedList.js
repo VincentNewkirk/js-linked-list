@@ -29,12 +29,15 @@ function linkedListGenerator(){
         tail.next = node;
         tail = node;
       }
+
       return node;
 
     }
+
     function _get(number){
       var thisNode = head;
       for ( var i = 0; i < number; i++ ){
+
         if( thisNode.next === null ){
           return false;
         }
@@ -74,7 +77,6 @@ function linkedListGenerator(){
         next: null
       }
       if ( position === false || index < 0 ){
-        console.log(value, position);
         return false;
 
       } else if ( index === 0 ){
@@ -97,5 +99,4 @@ function linkedListGenerator(){
       insert: _insert,
       add: _add
     }
-
 }
