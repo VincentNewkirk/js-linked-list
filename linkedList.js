@@ -17,7 +17,7 @@ function linkedListGenerator(){
     }
 
     function _add(value){
-      node = {
+      var node = {
         value: value,
         next: null
       }
@@ -60,12 +60,32 @@ function linkedListGenerator(){
       if( current.next === null ){
         x.next = null;
         tail = x;
+
       } else {
         x.next = y;
       }
     }
 
-    function _insert(){
+    function _insert( value, index ){
+      var position = _get(index);
+      var x = _get(index - 1);
+      var node = {
+        value: value,
+        next: null
+      }
+      if ( position === false || index < 0 ){
+        console.log(value, position);
+        return false;
+
+      } else if ( index === 0 ){
+        node.next = position;
+        head = node;
+
+      } else {
+      node.next = position;
+      x.next = node;
+
+      }
 
     }
 
